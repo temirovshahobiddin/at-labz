@@ -8,9 +8,6 @@ export default defineNuxtConfig({
     '~/assets/main.css'
   ],
   ssr: false,
-  nitro: {
-    preset: 'netlify'
-  },
   tailwindcss: {},
   devtools: { enabled: true }
 })
