@@ -127,7 +127,7 @@ const navLinks = [
           </NuxtLink>
         </div>
 
-        <button class="text-black-1d max-[767px]:w-6" type="button">
+        <button class="hidden text-black-1d max-[767px]:w-6 max-[1282px]:block" type="button">
           <Burger />
         </button>
       </div>
