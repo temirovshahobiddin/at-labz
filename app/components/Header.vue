@@ -4,6 +4,7 @@ import ArrowGrowt from "~/components/icons/ArrowGrowt.vue"
 import Psychology from "~/components/icons/psychology.vue"
 import Money from "~/components/icons/Money.vue"
 import Burger from "~/components/icons/Burger.vue"
+import BurgerClose from "~/components/icons/BurgerClose.vue"
 
 const navLinks = [
   {
@@ -135,8 +136,9 @@ function menuToggle() {
           </NuxtLink>
         </div>
 
-        <button @click="menuToggle()" class="hidden text-black-1d max-[767px]:w-6 max-[1282px]:block" type="button">
-          <Burger />
+        <button @click="menuToggle()" class="justify-center items-center w-11 h-11 hidden text-black-1d max-[767px]:w-6 max-[1282px]:flex" type="button">
+          <Burger v-if="!isMenuOpen" />
+          <BurgerClose v-else />
         </button>
       </div>
     </Container>

@@ -52,7 +52,7 @@ defineProps<{isMenuOpen: boolean}>()
 </script>
 
 <template>
-  <div class="hidden fixed top-[150px] left-0 w-full h-[calc(100%-150px)] py-[50px] px-5 bg-white overflow-y-auto max-[1282px]:flex flex-col justify-between duration-200" :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'">
+  <div class="hidden fixed top-[150px] left-0 w-full h-[calc(100%-150px)] z-10 py-[50px] px-5 bg-white overflow-y-auto max-[1282px]:flex flex-col justify-between duration-200" :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'">
     <nav class="mb-[75px]">
       <ul class="flex flex-col gap-5">
         <li v-for="link in navLinks">
