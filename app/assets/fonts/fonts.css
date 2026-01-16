@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Inter';
+  src: url("/app/assets/fonts/Inter-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/app/assets/fonts/Inter-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/app/assets/fonts/Inter-SemiBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("/app/assets/fonts/Inter-Bold.ttf");
+  font-display: swap;
+}
