@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     '~/assets/main.css'
   ],
   ssr: false,
+  nitro: {
+    preset: 'static'
+  },
   tailwindcss: {},
   devtools: { enabled: true }
 })
