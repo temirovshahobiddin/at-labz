@@ -52,7 +52,11 @@ defineProps<{isMenuOpen: boolean}>()
 </script>
 
 <template>
-  <div class="hidden fixed top-[150px] left-0 w-full h-[calc(100%-150px)] z-10 py-[50px] px-5 bg-white overflow-y-auto max-[1282px]:flex flex-col justify-between duration-200" :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'">
+  <Transition name="slide">
+    <div
+      v-if="isMenuOpen"
+      class="hidden fixed top-[150px] left-0 w-full h-[calc(100%-150px)] z-10 py-[50px] px-5 bg-white overflow-y-auto max-[1282px]:flex flex-col justify-between"
+    >
     <nav class="mb-[75px]">
       <ul class="flex flex-col gap-5">
         <li v-for="link in navLinks">
@@ -119,5 +123,18 @@ defineProps<{isMenuOpen: boolean}>()
         А ещё мы есть в <NuxtLink class="underline" href="#">Telegram</NuxtLink>
       </p>
     </div>
-  </div>
+    </div>
+  </Transition>
 </template>
+
+<style scoped>
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}
+</style>
