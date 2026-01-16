@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     '~/assets/fonts/fonts.css',
     '~/assets/main.css'
   ],
+  ssr: false,
+  nitro: {
+    preset: 'netlify'
+  },
   tailwindcss: {},
   devtools: { enabled: true }
 })
