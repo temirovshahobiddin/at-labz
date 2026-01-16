@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Student from "~/components/icons/Student.vue"
 import ArrowGrowt from "~/components/icons/ArrowGrowt.vue"
 import Psychology from "~/components/icons/psychology.vue"
@@ -48,6 +48,14 @@ const navLinks = [
     hasDropdown: false
   },
 ]
+
+const isMenuOpen = ref(false)
+
+function menuToggle() {
+  isMenuOpen.value = !isMenuOpen.value
+
+  document.documentElement.classList.toggle('lock', isMenuOpen.value)
+}
 </script>
 
 <template>
@@ -127,10 +135,12 @@ const navLinks = [
           </NuxtLink>
         </div>
 
-        <button class="hidden text-black-1d max-[767px]:w-6 max-[1282px]:block" type="button">
+        <button @click="menuToggle()" class="hidden text-black-1d max-[767px]:w-6 max-[1282px]:block" type="button">
           <Burger />
         </button>
       </div>
     </Container>
+
+    <MobMenu :isMenuOpen="isMenuOpen" />
   </header>
 </template>
